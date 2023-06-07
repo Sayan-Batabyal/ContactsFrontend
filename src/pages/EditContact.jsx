@@ -28,7 +28,7 @@ const EditContact = () => {
                 address:address.current.value
             }
             axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('userToken')}`
-            await axios.put(`https://vast-gray-cheetah-sari.cyclic.app/${params.id}`,dataNew)
+            await axios.put(`https://vast-gray-cheetah-sari.cyclic.app/api/contact/${params.id}`,dataNew)
             nav('/')
             
         }
