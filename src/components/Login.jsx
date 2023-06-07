@@ -14,7 +14,7 @@ const Login = () => {
         pass:pass.current.value
     }
     try{
-        const res=await axios.post("https://contactsapi.cyclic.app/api/auth/login",data)
+        const res=await axios.post("https://vast-gray-cheetah-sari.cyclic.app/api/auth/login",data)
         if(!res.data.token)
         {
             alert(res.data.status)

@@ -9,7 +9,7 @@ const EditContact = () => {
         const phone=useRef()
         const name=useRef()
         const address=useRef()
-        const {loading,data}=useFetch(`https://contactsapi.cyclic.app/api/contact/${params.id}`)
+        const {loading,data}=useFetch(`https://vast-gray-cheetah-sari.cyclic.app/api/contact/${params.id}`)
         
         useEffect(() => {
            if(!loading){
@@ -28,7 +28,7 @@ const EditContact = () => {
                 address:address.current.value
             }
             axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('userToken')}`
-            await axios.put(`https://contactsapi.cyclic.app/api/contact/${params.id}`,dataNew)
+            await axios.put(`https://vast-gray-cheetah-sari.cyclic.app/${params.id}`,dataNew)
             nav('/')
             
         }

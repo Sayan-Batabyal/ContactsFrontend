@@ -15,7 +15,7 @@ const AddContact = () => {
             address:address.current.value
         }
         axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('userToken')}`
-        await axios.post("https://contactsapi.cyclic.app/api/contact",data)
+        await axios.post("https://vast-gray-cheetah-sari.cyclic.app/api/contact",data)
         nav('/')
         
     }

@@ -14,7 +14,7 @@ const Register = () => {
     }
     try{
 
-        const res=await axios.post("https://contactsapi.cyclic.app/api/auth/register",data)
+        const res=await axios.post("https://vast-gray-cheetah-sari.cyclic.app/api/auth/register",data)
         if(res.data.status!=="success"){
             alert(res.data.status)
             return;

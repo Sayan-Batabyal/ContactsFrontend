@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const ContactsTable = () => {
     const nav=useNavigate()
     const [list, setList] = useState([]);
-    const { data } = useFetch("https://contactsapi.cyclic.app/api/contact")
+    const { data } = useFetch("https://vast-gray-cheetah-sari.cyclic.app/api/contact")
   
     useEffect(() => {
       setList(data)
@@ -16,7 +16,7 @@ const ContactsTable = () => {
   
     const handleDelete = async (id) => {
       try {
-        await axios.delete(`https://contactsapi.cyclic.app/api/contact/${id}`);
+        await axios.delete(`https://vast-gray-cheetah-sari.cyclic.app/api/contact/${id}`);
         setList(list.filter((item) => item._id !== id));
       } catch (err) {
         throw err;
